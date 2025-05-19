@@ -31,7 +31,7 @@ Welcome to my personal developer portfolio! Built with **Next.js**, **MUI**, **T
 
 ## 🔗 Live Demo
 
-> [https://your-portfolio-link.vercel.app](https://your-portfolio-link.vercel.app)
+> [https://manav-dhami.vercel.app/](https://your-portfolio-link.vercel.app)
 
 
 ## 📥 Installation & Run Locally
