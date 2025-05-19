@@ -17,7 +17,7 @@ const Footer = () => {
       <Box sx={{ backgroundColor: "#121212", pt: 6, pb: 4 }}>
         <Container maxWidth="lg">
           <Grid container spacing={4} alignItems="center">
-            <Grid item xs={12} md={5}>
+            <Grid item xs={12} md={5} ml={3}>
               <Typography
                 variant="h3"
                 sx={{
@@ -52,7 +52,7 @@ const Footer = () => {
                 </MuiLink>
                 •
                 <MuiLink
-                  href="#"
+                  href="achievements"
                   underline="none"
                   sx={{ color: "#f7f7f7", mx: 1 }}>
                   Achievements
@@ -84,6 +84,7 @@ const Footer = () => {
                   flexDirection: "column",
                   alignItems: "center",
                   textAlign: "center",
+                  ml: 10,
                 }}>
                 <Box
                   sx={{

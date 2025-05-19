@@ -9,7 +9,7 @@ const Projects = () => {
     {
       title: "SurveySync",
       description: "A feedback survey platform with interactive analytics.",
-      link: "https://github.com/yourusername/surveysync",
+      link: "https://github.com/Manav1026/SurveySync",
       tags: ["Node.js", "MongoDB", "Handlebars"],
       summary:
         "Designed to help organizations gather and analyze feedback efficiently, providing real-time insights.",
@@ -18,7 +18,6 @@ const Projects = () => {
       title: "HR Nexus",
       description:
         "A centralized HR platform integrating payroll and recruitment.",
-      link: "https://github.com/yourusername/hr-nexus",
       tags: ["Java", "JSP", "DynamoDB"],
       summary:
         "Streamlines HR processes, improving efficiency in managing employee data and recruitment workflows.",

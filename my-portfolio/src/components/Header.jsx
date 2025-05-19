@@ -8,7 +8,7 @@ const Header = () => {
     { title: "Home", path: "/" },
     { title: "Projects", path: "/projects" },
     { title: "Experience", path: "/experience" },
-    { title: "Achievements", path: "#" },
+    { title: "Achievements", path: "/achievements" },
     { title: "Education", path: "/education" },
   ];
 
@@ -35,7 +35,7 @@ const Header = () => {
           {navLinks.map((link, index) => {
             const isActive = router.pathname === link.path;
             return (
-              <Link key={index} href={link.path} passHref legacyBehavior>
+              <Link key={index} href={link.path} passHref>
                 <Button
                   sx={{
                     color: isActive ? "#60a5fa" : "#f1f5f9",

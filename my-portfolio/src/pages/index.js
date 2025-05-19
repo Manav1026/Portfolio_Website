@@ -3,7 +3,27 @@ import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import Link from "next/link";
-import { Box, Button, Typography, Container } from "@mui/material";
+import { Box, Button, Typography, Container, Grid } from "@mui/material";
+
+const skills = [
+  { name: "UX Design", color: "#facc15" },
+  { name: "Product Development", color: "#22c55e" },
+  { name: "UI Design", color: "#ef4444" },
+  { name: "Cloud Infrastructure", color: "#a855f7" },
+  { name: "Data Science", color: "#ec4899" },
+  { name: "Data Engineering", color: "#6366f1" },
+  { name: "Project Management", color: "#38bdf8" },
+  { name: "Software Architecture", color: "#f97316" },
+  { name: "React.js", color: "#61dafb" },
+  { name: "Spring Boot", color: "#6db33f" },
+  { name: "Firebase", color: "#ffa000" },
+  { name: "Redis", color: "#d32f2f" },
+  { name: "Supabase", color: "#3ecf8e" },
+  { name: "MongoDB", color: "#10b981" },
+  { name: "Node.js", color: "#8cc84b" },
+  { name: "Java", color: "#f44336" },
+  { name: "Next.js", color: "#1976d280" },
+];
 
 const Home = () => {
   return (
@@ -66,18 +86,15 @@ const Home = () => {
                 fontSize: { xs: 40, md: 64 },
                 mb: 2,
               }}>
-              CODE.
-              <strong>CREATE.</strong>
-              SCALE.
+              CODE. <strong>CREATE.</strong> SCALE.
             </Typography>
           </motion.div>
 
-          {/* Subtitle */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}>
-            <Typography
+            {/* <Typography
               variant="h6"
               sx={{
                 maxWidth: 720,
@@ -88,12 +105,16 @@ const Home = () => {
               Passionate full-stack developer with experience in modern web
               technologies and a keen interest in creating impactful digital
               experiences.
-            </Typography>
+            </Typography> */}
           </motion.div>
 
-          {/* Buttons */}
           <motion.div
-            style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap" }}
+            style={{
+              display: "flex",
+              gap: "1.5rem",
+              flexWrap: "wrap",
+              marginTop: "1rem",
+            }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1 }}>
@@ -111,22 +132,71 @@ const Home = () => {
                 View Projects
               </Button>
             </Link>
-            <Link href="/contact" passHref>
-              <Button
-                variant="outlined"
-                size="large"
-                sx={{
-                  borderColor: "white",
-                  color: "white",
-                  fontWeight: "bold",
-                  px: 4,
-                  "&:hover": { backgroundColor: "white", color: "black" },
-                }}>
-                Contact Me
-              </Button>
-            </Link>
           </motion.div>
         </Container>
+
+        <Box sx={{ py: 10, px: 3, background: "#000000" }}>
+          <Typography
+            variant="h4"
+            align="center"
+            fontWeight="bold"
+            sx={{
+              fontSize: { xs: 24, md: 36 },
+              mb: 4,
+              fontFamily: "'Poppins', sans-serif",
+            }}>
+            DESIGNING BETTER PRODUCTS, <br />
+            ONE <span style={{ color: "#a855f7" }}>SKILL</span> AT A TIME.
+          </Typography>
+
+          <Grid
+            container
+            spacing={3}
+            justifyContent="center"
+            maxWidth="lg"
+            sx={{ mx: "auto" }}>
+            {skills.map((skill, index) => (
+              <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+                <motion.div
+                  whileHover={{ scale: 1.05, backgroundColor: skill.color }}
+                  transition={{ duration: 0.3 }}>
+                  <Box
+                    sx={{
+                      padding: "24px",
+                      paddingRight: "53px",
+                      background: "#111111",
+                      color: "white",
+                      borderRadius: "24px",
+                      p: 3,
+                      height: "100%",
+                      position: "relative",
+                      boxShadow: 6,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontWeight: "bold",
+                      fontSize: "1.2rem",
+                      textAlign: "center",
+                    }}>
+                    {skill.name}
+                    <Box
+                      sx={{
+                        position: "absolute",
+                        top: 0,
+                        right: 0,
+                        width: "48px",
+                        height: "48px",
+                        backgroundColor: skill.color,
+                        borderBottomLeftRadius: "100%",
+                      }}
+                    />
+                  </Box>
+                </motion.div>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+
         <Footer />
       </Box>
     </>

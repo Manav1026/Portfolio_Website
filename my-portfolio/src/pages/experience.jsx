@@ -47,7 +47,7 @@ const Experience = () => {
           align="center"
           fontWeight="bold"
           gutterBottom
-          sx={{ mb: 6, fontFamily: "'Aladin', cursive" }}>
+          sx={{ mb: 6, mt: 4, fontFamily: "'Aladin', cursive" }}>
           🧠 My Experience
         </Typography>
 
