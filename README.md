@@ -3,7 +3,7 @@
 
 Welcome to my personal developer portfolio! Built with **Next.js**, **MUI**, **Tailwind CSS**, and **Framer Motion**, this site showcases my **projects**, **skills**, **education**, **certifications**, and **achievements**—all in a creative, responsive interface.
 
-![Portfolio Screenshot](./public/images/preview.png)
+![Portfolio Screenshot](my-portfolio/public/images/preview.png)
 
 ---
 
